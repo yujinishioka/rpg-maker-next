@@ -9,7 +9,7 @@ Yarn | **v1.22.21**
 
 ## Rodando projeto:
 
-1. instalando dependencias:
+1. Instalando dependencias:
 
   ```
   npm i

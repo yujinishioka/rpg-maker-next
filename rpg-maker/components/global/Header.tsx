@@ -1,9 +1,19 @@
+import Link from "next/link";
+import { ItemMenu } from "@/types";
+import Menu from "./Menu";
+
 export default function Header() {
-  return <div className="py-4 bg-primary">
+  const menuItens: ItemMenu[] = [
+    { name: "Personagens", href: "personagens" },
+    { name: "Campanhas", href: "campanhas" },
+    { name: "Conta", href: "conta" },
+  ]
+
+  return <div className="py-4 bg-black/70">
     <div className="container flex items-center justify-between text-white">
-      <p>nome</p>
+      <Link href="/">RPG maker</Link>
       <p>logo</p>
-      <p>menu</p>
+      <Menu items={menuItens}  />
     </div>
   </div>
 }
