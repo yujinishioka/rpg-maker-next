@@ -1,3 +1,4 @@
+import React from 'react';
 import { AppProps } from 'next/app';
 import { Open_Sans, Barlow } from 'next/font/google';
 import Header from '@/components/global/Header';

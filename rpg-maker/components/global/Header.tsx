@@ -6,6 +6,8 @@ export default function Header() {
   const menuItens: ItemMenu[] = [
     { name: "Personagens", href: "personagens" },
     { name: "Campanhas", href: "campanhas" },
+    { name: "Wiki", href: "wiki" },
+    { name: "Notas", href: "notas" },
     { name: "Conta", href: "conta" },
   ]
 
