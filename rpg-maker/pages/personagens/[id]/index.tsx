@@ -3,10 +3,9 @@ import { useRouter } from "next/router";
 export default function Personagem() {
   const router = useRouter();
   const { id } = router.query;
-  
   return <div className="container min-h-[calc(100vh-10.4rem)] my-6 lg:min-h-[calc(100vh-10rem)]">
     <div className="my-4">
-      <p className="font-bold">ficha de personagem</p>
+      <p className="font-bold">ficha de personagem - id: {id}</p>
       <p>nome do personagem</p>
       <p>raças</p>
       <p>classes e níveis</p>
