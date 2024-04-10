@@ -17,7 +17,7 @@ export default function Menu(data: Readonly<Props>) {
         </Popover.Button>
         <Popover.Panel className="absolute top-[2.75rem] -right-8 w-[100vw] flex flex-col py-4 px-8 gap-2 items-end bg-primary">
           {data?.items && data.items.length > 0 && data.items.map((item: ItemMenu) =>
-            <Link key={`menu-${item.href}`} href={item.href}>{item.name}</Link>
+            <Link key={`menu-${item.href}`} href={`/${item.href}`}>{item.name}</Link>
           )}
         </Popover.Panel>
       </>)}
@@ -25,7 +25,7 @@ export default function Menu(data: Readonly<Props>) {
     {/* Desktop */}
     <div className="hidden gap-8 lg:flex">
       {data?.items && data.items.length > 0 && data.items.map((item: ItemMenu) =>
-        <Link key={`menu-${item.href}`} href={item.href}>{item.name}</Link>
+        <Link key={`menu-${item.href}`} href={`/${item.href}`}>{item.name}</Link>
       )}
     </div>
   </>

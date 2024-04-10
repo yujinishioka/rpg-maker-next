@@ -2,9 +2,9 @@ import React from 'react';
 import { AppProps } from 'next/app';
 import { Open_Sans, Barlow } from 'next/font/google';
 import Header from '@/components/global/Header';
+import Footer from '@/components/global/Footer';
 import '@/styles/reset.css';
 import '@/styles/global.css';
-import Footer from '@/components/global/Footer';
 
 const barlow = Barlow({
   subsets: ['latin'],

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Luna",
+    "level": 1,
+    "races": [
+      {"id": 1, "name": "Humano"}
+    ],
+    "classes": [
+      {"id": 1, "name": "Rogue", "level": 1}
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Sebas",
+    "level": 20,
+    "races": [
+      {"id": 2, "name": "Dragão"},
+      {"id": 3, "name": "Wyvern"}
+    ],
+    "classes": [
+      {"id": 2, "name": "Monk", "level": 17},
+      {"id": 3, "name": "Fighter", "level": 3}
+    ]
+  }
+]
