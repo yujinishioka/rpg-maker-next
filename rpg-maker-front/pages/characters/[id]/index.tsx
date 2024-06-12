@@ -85,7 +85,7 @@ export default function Personagem() {
       <p>age</p>
       <p>height</p>
       <p>weight</p>
-      <p>eye color</p>
+      <p>eyes color</p>
       <p>skin color</p>
       <p>hair color</p>
       <p>appearance - image needed</p>
