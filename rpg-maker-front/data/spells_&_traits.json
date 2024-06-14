@@ -1,0 +1,480 @@
+[
+  {
+    "id": 1,
+    "name": "Acid Splash",
+    "school": "conjuration",
+    "level": 0,
+    "casting_time": "1 action",
+    "min_range": 0,
+    "max_range": 60,
+    "range_path": "15x15 AoE",
+    "components": "V, S",
+    "material": null,
+    "duration": "instantaneous",
+    "saving_throw": {
+      "value": 0,
+      "saving_throw_modifier": null,
+      "saving_throw_type": "DEX",
+      "success_saving_throw": "negate"
+    },
+    "damage": {
+      "value": {
+        "1": "1d6",
+        "5": "2d6",
+        "11": "3d6",
+        "17": "4d6"
+      },
+      "damage_modifier": null,
+      "damage_type": "acid"
+    },
+    "buff": null,
+    "higher_level": null,
+    "recover": ["short rest", "long rest"],
+    "details": "<p>Vou hurl a bubble of acid. Choose one creature within range, or choose two creatures within range that are within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage. This spell's damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).</p>"
+  },
+  {
+    "id": 2,
+    "name": "Aid",
+    "school": "abjuration",
+    "level": 2,
+    "casting_time": "1 action",
+    "min_range": 0,
+    "max_range": 30,
+    "range_path": "3 target",
+    "components": "V, S, M",
+    "material": "a tiny strip of white cloth",
+    "duration": "8 hours",
+    "saving_throw": null,
+    "damage": null,
+    "buff": {
+      "type": "status_increase",
+      "status_increase": [
+        {
+          "name": "max_hp",
+          "value": 5
+        },
+        {
+          "name": "hp",
+          "value": 5
+        }
+      ]
+    },
+    "higher_level": {
+      "damage_increase": null,
+      "buff_increase": {
+        "type": "status_increase",
+        "status_increase": [
+          {
+            "name": "max_hp",
+            "value": 5
+          },
+          {
+            "name": "hp",
+            "value": 5
+          }
+        ]
+      }
+    },
+    "recover": ["short rest", "long rest"],
+    "details": "<p>Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target's hit poinl maximum and current hit points increase by 5 for the duration.</p><p><strong>At Higher Levels</strong>. When you cast this spell using a spell slot of 3rd level or higher, a largel's hit points increase by an additional 5 for each slot level above 2nd.</p>"
+  },
+  {
+    "id": 3,
+    "name": "Alarm",
+    "school": "abjuration",
+    "level": 1,
+    "casting_time": "1 minute",
+    "min_range": 0,
+    "max_range": 30,
+    "range_path": "local",
+    "components": "V, S, M",
+    "material": "a tiny bell and a piece of fine silver wire",
+    "duration": "8 hours",
+    "saving_throw": null,
+    "damage": null,
+    "buff": {
+      "type": "alarm",
+      "alarm": {
+        "max_area": 20,
+        "mental_alarm_range": 5280,
+        "audible_alarm_range": 60
+      }
+    },
+    "higher_level": null,
+    "recover": ["short rest", "long rest"],
+    "details": "<p>You set an alarm against unwanted intrusion. Choose a door. a window, or an area within range that is no larger lhan a 20-foot cube. Until lhe spell ends. an alarm alerts you whenever a tiny or larger creature louches or enters lhe warded area. When you cast the spell, you can designale creatures lhat won't set off the alarm. You also choose whether the alarm is mental or audible.</p><p>A mental alarm alerts you with a ping in your mind if you are within a mile of the warded area. This ping awakens you if you are sleeping.</p><p>An audible alarm produces the sound of a hand bell for 10 seconds within 60 feet.</p>"
+  },
+  {
+    "id": 4,
+    "name": "Alter Self",
+    "school": "transmutation",
+    "level": 2,
+    "casting_time": "1 action",
+    "min_range": 0,
+    "max_range": 0,
+    "range_path": "self",
+    "components": "V, S",
+    "material": null,
+    "duration": "up to 1 hour",
+    "saving_throw": null,
+    "damage": null,
+    "buff": {
+      "type": "self_transformation",
+      "self-transformation": [
+        {
+          "name": "Aquatic Adaptation",
+          "details": "You adapt your body to an aquatic environment, sprouting gills and growing webbing between your fingers. You can breathe underwater and gain a swimming speed equal to your walking speed."
+        },
+        {
+          "name": "Change Appearance",
+          "details": "You transform your appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and distinguishing characteristics, if any. You can make yourself appear as a member of another race, though none of your statistics change. You can’t appear as a creature of a different size than you, and your basic shape stays the same. At any time for the duration of the spell, you can use your action to change your appearance in this way again."
+        },
+        {
+          "name": "Natural Weapons",
+          "details": "You grow claws, fangs, spines, horns, or a different natural weapon of your choice. Your unarmed strikes deal 1d6 damage of the chosen type, which is considered magical. You are proficient with your unarmed strikes. Finally, the natural weapon you choose determines the type of damage dealt."
+        }
+      ]
+    },
+    "higher_level": null,
+    "recover": ["short rest", "long rest"],
+    "details": "<p>You assume a different form. When you cast the spell, choose one of the following options, the effects of which last for the duration of the spell. While the spell lasts, you can end one option as an action to gain the benefits of a different one.</p><p><strong>Aquatic Adaptation:</strong> You adapt your body to an aquatic environment, sprouting gills and growing webbing between your fingers. You can breathe underwater and gain a swimming speed equal to your walking speed.</p><p><strong>Change Appearance:</strong> You transform your appearance. You decide what you look like, including your height, weight, facial features, sound of your voice, hair length, coloration, and distinguishing characteristics, if any. You can make yourself appear as a member of another race, though none of your statistics change. You can’t appear as a creature of a different size than you, and your basic shape stays the same. At any time for the duration of the spell, you can use your action to change your appearance in this way again.</p><p><strong>Natural Weapons:</strong> You grow claws, fangs, spines, horns, or a different natural weapon of your choice. Your unarmed strikes deal 1d6 damage of the chosen type, which is considered magical. You are proficient with your unarmed strikes. Finally, the natural weapon you choose determines the type of damage dealt.</p>"
+  },
+  {
+    "id": 5,
+    "name": "Animal Friendship",
+    "school": "enchantment",
+    "level": 1,
+    "casting_time": "1 action",
+    "min_range": 0,
+    "max_range": 30,
+    "range_path": "1 creature",
+    "components": "V, S, M",
+    "material": "a morsel of food",
+    "duration": "24 hours",
+    "saving_throw": {
+      "value": 0,
+      "saving_throw_modifier": null,
+      "saving_throw_type": "WIS",
+      "success_saving_throw": "negate"
+    },
+    "damage": null,
+    "buff": {
+      "type": "charm",
+      "details": "The beast must succeed on a Wisdom saving throw or be charmed by you for the spell’s duration. If you or one of your companions harms the target, the spell ends."
+    },
+    "recover": ["short rest", "long rest"],
+    "higher_level": {
+      "damage_increase": null,
+      "buff_increase": {
+        "type": "charm",
+        "details": "You can affect one additional beast for each slot level above 1st."
+      }
+    },
+    "details": "<p>This spell lets you convince a beast that you mean it no harm. Choose a beast that you can see within range. It must see and hear you. If the beast’s Intelligence is 4 or higher, the spell fails. Otherwise, the beast must succeed on a Wisdom saving throw or be charmed by you for the spell’s duration. If you or one of your companions harms the target, the spell ends.</p><p><strong>At Higher Levels.</strong> When you cast this spell using a spell slot of 2nd level or higher, you can affect one additional beast for each slot level above 1st.</p>"
+  },
+  {
+    "id": 6,
+    "name": "Animal Messenger"
+  },
+  {
+    "id": 7,
+    "name": "Animal Shapes"
+  },
+  {
+    "id": 8,
+    "name": "Animate Dead"
+  },
+  {
+    "id": 9,
+    "name": "Animate Objects"
+  },
+  {
+    "id": 10,
+    "name": "Antilife Shell"
+  },
+  {
+    "id": 11,
+    "name": "Antimagic Field"
+  },
+  {
+    "id": 12,
+    "name": "Antipathy/Sympathy"
+  },
+  {
+    "id": 13,
+    "name": "Arcane Eye"
+  },
+  {
+    "id": 14,
+    "name": "Arcane Gate"
+  },
+  {
+    "id": 15,
+    "name": "Arcane Lock"
+  },
+  {
+    "id": 16,
+    "name": "Armor of Agathys"
+  },
+  {
+    "id": 17,
+    "name": "Arms of Hadar"
+  },
+  {
+    "id": 18,
+    "name": "Astral Projection"
+  },
+  {
+    "id": 19,
+    "name": "Augury"
+  },
+  {
+    "id": 20,
+    "name": "Aura of Life"
+  },
+  {
+    "id": 21,
+    "name": "Aura of Purity"
+  },
+  {
+    "id": 22,
+    "name": "Aura of Vitality"
+  },
+  {
+    "id": 23,
+    "name": "Awaken"
+  },
+  {
+    "id": 24,
+    "name": "Bane"
+  },
+  {
+    "id": 25,
+    "name": "Banishing Smite"
+  },
+  {
+    "id": 26,
+    "name": "Banishment"
+  },
+  {
+    "id": 27,
+    "name": "Barskin"
+  },
+  {
+    "id": 28,
+    "name": "Beacon of Hope"
+  },
+  {
+    "id": 29,
+    "name": "Beast Sense"
+  },
+  {
+    "id": 30,
+    "name": "Bestow Curse"
+  },
+  {
+    "id": 31,
+    "name": "Bigby's Hand"
+  },
+  {
+    "id": 32,
+    "name": "Blade Barrier"
+  },
+  {
+    "id": 33,
+    "name": "Blade Ward"
+  },
+  {
+    "id": 34,
+    "name": "Bless"
+  },
+  {
+    "id": 35,
+    "name": "Blight"
+  },
+  {
+    "id": 36,
+    "name": "Blinding Smite"
+  },
+  {
+    "id": 37,
+    "name": "Blindness/Deafness"
+  },
+  {
+    "id": 38,
+    "name": "Blink"
+  },
+  {
+    "id": 39,
+    "name": "Blur"
+  },
+  {
+    "id": 40,
+    "name": "Branding Smite"
+  },
+  {
+    "id": 41,
+    "name": "Breath Weapon Acid",
+    "school": "ancestry",
+    "level": null,
+    "casting_time": "1 action",
+    "min_range": 5,
+    "max_range": 30,
+    "range_path": "line",
+    "components": null,
+    "material": null,
+    "duration": "instantaneous",
+    "saving_throw": {
+      "value": 8,
+      "saving_throw_modifier": ["CON", "proficiency"],
+      "saving_throw_type": "DEX",
+      "success_saving_throw": "half"
+    },
+    "damage": {
+      "value": {
+        "1": "2d6",
+        "6": "3d6",
+        "11": "4d6",
+        "16": "5d6"
+      },
+      "damage_modifier": null,
+      "damage_type": "acid"
+    },
+    "buff": null,
+    "higher_level": null,
+    "recover": ["short rest", "long rest"],
+    "details": "<p>You can use your action to exhale destructive energy. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can’t use it again until you complete a short or long rest.</p>"
+  },
+  {
+    "id": 42,
+    "name": "Breath Weapon Cold",
+    "school": "ancestry",
+    "level": null,
+    "casting_time": "1 action",
+    "min_range": 0,
+    "max_range": 15,
+    "range_path": "cone",
+    "components": null,
+    "material": null,
+    "duration": "instantaneous",
+    "saving_throw": {
+      "value": 8,
+      "saving_throw_modifier": ["CON", "proficiency"],
+      "saving_throw_type": "CON",
+      "success_saving_throw": "half"
+    },
+    "damage": {
+      "value": {
+        "1": "2d6",
+        "6": "3d6",
+        "11": "4d6",
+        "16": "5d6"
+      },
+      "damage_modifier": null,
+      "damage_type": "cold"
+    },
+    "buff": null,
+    "higher_level": null,
+    "recover": ["short rest", "long rest"],
+    "details": "<p>You can use your action to exhale destructive energy. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can’t use it again until you complete a short or long rest.</p>"
+  },
+  {
+    "id": 43,
+    "name": "Breath Weapon Fire",
+    "school": "ancestry",
+    "level": null,
+    "casting_time": "1 action",
+    "min_range": 0,
+    "max_range": 15,
+    "range_path": "cone",
+    "components": null,
+    "material": null,
+    "duration": "instantaneous",
+    "saving_throw": {
+      "value": 8,
+      "saving_throw_modifier": ["CON", "proficiency"],
+      "saving_throw_type": "DEX",
+      "success_saving_throw": "half"
+    },
+    "damage": {
+      "value": {
+        "1": "2d6",
+        "6": "3d6",
+        "11": "4d6",
+        "16": "5d6"
+      },
+      "damage_modifier": null,
+      "damage_type": "fire"
+    },
+    "buff": null,
+    "higher_level": null,
+    "recover": ["short rest", "long rest"],
+    "details": "<p>You can use your action to exhale destructive energy. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can’t use it again until you complete a short or long rest.</p>"
+  },
+  {
+    "id": 44,
+    "name": "Breath Weapon Lightning",
+    "school": "ancestry",
+    "level": null,
+    "casting_time": "1 action",
+    "min_range": 5,
+    "max_range": 30,
+    "range_path": "line",
+    "components": null,
+    "material": null,
+    "duration": "instantaneous",
+    "saving_throw": {
+      "value": 8,
+      "saving_throw_modifier": ["CON", "proficiency"],
+      "saving_throw_type": "DEX",
+      "success_saving_throw": "half"
+    },
+    "damage": {
+      "value": {
+        "1": "2d6",
+        "6": "3d6",
+        "11": "4d6",
+        "16": "5d6"
+      },
+      "damage_modifier": null,
+      "damage_type": "lightning"
+    },
+    "buff": null,
+    "higher_level": null,
+    "recover": ["short rest", "long rest"],
+    "details": "<p>You can use your action to exhale destructive energy. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can’t use it again until you complete a short or long rest.</p>"
+  },
+  {
+    "id": 45,
+    "name": "Breath Weapon Poison",
+    "school": "ancestry",
+    "level": null,
+    "casting_time": "1 action",
+    "min_range": 0,
+    "max_range": 15,
+    "range_path": "cone",
+    "components": null,
+    "material": null,
+    "duration": "instantaneous",
+    "saving_throw": {
+      "value": 8,
+      "saving_throw_modifier": ["CON", "proficiency"],
+      "saving_throw_type": "DEX",
+      "success_saving_throw": "half"
+    },
+    "damage": {
+      "value": {
+        "1": "2d6",
+        "6": "3d6",
+        "11": "4d6",
+        "16": "5d6"
+      },
+      "damage_modifier": null,
+      "damage_type": "poison"
+    },
+    "buff": null,
+    "higher_level": null,
+    "recover": ["short rest", "long rest"],
+    "details": "<p>You can use your action to exhale destructive energy. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can’t use it again until you complete a short or long rest.</p>"
+  }
+]

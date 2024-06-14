@@ -37,132 +37,104 @@
         "value": "Medium",
         "description": "<p>Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds.</p>"
       },
-      "speed": 30,
-      "subtype": {
+      "speed": {
+        "value": 30
+      },
+      "subrace": {
         "name": "Draconic Ancestry",
-        "details": [
+        "descriptions": [
           {
-            "title": "Principal",
-            "description": "<p>You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry. Your breath weapon and damage resistance are determined by the dragon type.</p>"
+            "title": "Draconic Ancestry",
+            "text": "<p>You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry. Your breath weapon and damage resistance are determined by the dragon type.</p>"
           },
           {
             "title": "Breath Weapon",
-            "description": "<p>You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can’t use it again until you complete a short or long rest.</p>"
+            "text": "<p>You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can’t use it again until you complete a short or long rest.</p>"
           },
           {
             "title": "Resistance",
-            "description": "<p>You have resistance to the damage type associated with your draconic ancestry.</p>"
+            "text": "<p>You have resistance to the damage type associated with your draconic ancestry.</p>"
           }
         ],
-        "ancestry": [
+        "division": [
           {
             "id": 1,
-            "dragon": "Black",
-            "type": "Acid",
-            "breath_weapon": {
-              "min_range": 5,
-              "max_range": 30,
-              "path": "line",
-              "save": "DEX"
+            "name": "Black",
+            "skills": {
+              "resistance": ["Acid"],
+              "attacks": [41]
             }
           },
           {
             "id": 2,
-            "dragon": "Blue",
-            "type": "Lightning",
-            "breath_weapon": {
-              "min_range": 5,
-              "max_range": 30,
-              "path": "line",
-              "save": "DEX"
+            "name": "Blue",
+            "skills": {
+              "resistance": ["Lightning"],
+              "attacks": [44]
             }
           },
           {
             "id": 3,
-            "dragon": "Brass",
-            "type": "Fire",
-            "breath_weapon": {
-              "min_range": 5,
-              "max_range": 30,
-              "path": "line",
-              "save": "DEX"
+            "name": "Brass",
+            "skills": {
+              "resistance": ["Fire"],
+              "attacks": [43]
             }
           },
           {
             "id": 4,
-            "dragon": "Bronze",
-            "type": "Lightning",
-            "breath_weapon": {
-              "min_range": 5,
-              "max_range": 30,
-              "path": "line",
-              "save": "DEX"
+            "name": "Bronze",
+            "skills": {
+              "resistance": ["Lightning"],
+              "attacks": [44]
             }
           },
           {
             "id": 5,
-            "dragon": "Copper",
-            "type": "Acid",
-            "breath_weapon": {
-              "min_range": 5,
-              "max_range": 30,
-              "path": "line",
-              "save": "DEX"
+            "name": "Copper",
+            "skills": {
+              "resistance": ["Acid"],
+              "attacks": [41]
             }
           },
           {
             "id": 6,
-            "dragon": "Gold",
-            "type": "Fire",
-            "breath_weapon": {
-              "min_range": 0,
-              "max_range": 15,
-              "path": "cone",
-              "save": "DEX"
+            "name": "Gold",
+            "skills": {
+              "resistance": ["Fire"],
+              "attacks": [43]
             }
           },
           {
             "id": 7,
-            "dragon": "Green",
-            "type": "Poison",
-            "breath_weapon": {
-              "min_range": 0,
-              "max_range": 15,
-              "path": "cone",
-              "save": "CON"
+            "name": "Green",
+            "skills": {
+              "resistance": ["Poison"],
+              "attacks": [45]
             }
           },
           {
             "id": 8,
-            "dragon": "Red",
-            "type": "Fire",
-            "breath_weapon": {
-              "min_range": 0,
-              "max_range": 15,
-              "path": "cone",
-              "save": "DEX"
+            "name": "Red",
+            "skills": {
+              "resistance": ["Fire"],
+              "attacks": [43]
             }
           },
           {
             "id": 9,
-            "dragon": "Silver",
-            "type": "Cold",
-            "breath_weapon": {
-              "min_range": 0,
-              "max_range": 15,
-              "path": "cone",
-              "save": "CON"
+            "name": "Silver",
+            "skills": {
+              "resistance": ["Cold"],
+              "attacks": [42]
             }
           },
           {
             "id": 10,
-            "dragon": "White",
-            "type": "Cold",
-            "breath_weapon": {
-              "min_range": 0,
-              "max_range": 15,
-              "path": "cone",
-              "save": "CON"
+            "name": "White",
+            "skills": {
+              "resistance": ["Cold"],
+              "attacks": [42]
             }
           }
         ]
@@ -202,158 +174,101 @@
       }
     ],
     "names": {
-      "description": "<p>Dragonborn have personal names given at birth, but they put their clan names first as a mark of honor. A childhood name or nickname is often used among clutchmates as a descriptive term or a term of endearment. The name might recall an event or center on a habit.</p>",
+      "description": "<p>A dwarf’s name is granted by a clan elder, in accordance with tradition. Every proper dwarven name has been used and reused down through the generations. A dwarf’s name belongs to the clan, not to the individual. A dwarf who misuses or brings shame to a clan name is stripped of the name and forbidden by law to use any dwarven name in its place.</p>",
       "types": {
-        "male": ["Arjhan", "Balasar", "Bharash", "Donaar", "Ghesh", "Heskan", "Kriv", "Medrash", "Mehen", "Nadarr", "Pandjed", "Patrin", "Rhogar", "Shamash", "Shedinn", "Tarhun", "Torinn"],
-        "female": ["Akra", "Biri", "Daar", "Farideh", "Harann", "Havilar", "Jheri", "Kava", "Korinn", "Mishann", "Nala", "Perra", "Raiann", "Sora", "Surina", "Thava", "Uadjit"],
-        "childhood": ["Climber", "Earbender", "Leaper", "Pious", "Shieldbiter", "Zealous"],
-        "clan": ["Clethtinthiallor", "Daardendrian", "Delmirev", "Drachedandion", "Fenkenkabradon", "Kepeshkmolik", "Kerrhylon", "Kimbatuul", "Linxakasendalor", "Myastan", "Nemmonis", "Norixius", "Ophinshtalajiir", "Prexijandilin", "Shestendeliath", "Turnuroth", "Verthisathurgiesh", "Yarjerit"]
+        "male": ["Adrik", "Alberich", "Baern", "Barendd", "Brottor", "Bruenor", "Dain", "Darrak", "Delg", "Eberk", "Einkil", "Fargrim", "Flint", "Gardain", "Harbek", "Kildrak", "Morgran", "Orsik", "Oskar", "Rangrim", "Rurik", "Taklinn", "Thoradin", "Thorin", "Tordek", "Traubon", "Travok", "Ulfgar", "Veit", "Vondal"],
+        "female": ["Amber", "Artin", "Audhild", "Bardryn", "Dagnal", "Diesa", "Eldeth", "Falkrunn", "Finellen", "Gunnloda", "Gurdis", "Helja", "Hlin", "Kathra", "Kristryd", "Ilde", "Liftrasa", "Mardred", "Riswynn", "Sannl", "Torbera", "Torgga", "Vistra"],
+        "clan": ["Balderk", "Battlehammer", "Brawnanvil", "Dankil", "Fireforge", "Frostbeard", "Gorunn", "Holderhek", "Ironfist", "Loderr", "Lutgehr", "Rumnaheim", "Strakeln", "Torunn", "Ungart"]
       }
     },
     "traits": {
       "ability_score_increase": {
-        "strength": 2,
-        "charisma": 1
+        "constitution": 2
       },
-      "age": "<p>Young dragonborn grow quickly. They walk hours after hatching, attain the size and development of a 10-year-old human child by the age of 3, and reach adulthood by 15. They live to be around 80.</p>",
+      "age": "<p>Dwarves mature at the same rate as humans, but they’re considered young until they reach the age of 50. On average, they live about 350 years.</p>",
       "size": { 
         "value": "Medium",
-        "description": "<p>Dragonborn are taller and heavier than humans, standing well over 6 feet tall and averaging almost 250 pounds.</p>"
+        "description": "<p>Dwarves stand between 4 and 5 feet tall and average about 150 pounds.</p>"
       },
-      "speed": 30,
-      "subtype": {
-        "name": "Draconic Ancestry",
-        "details": [
+      "speed": {
+        "value": 30,
+        "details": "Your speed is not reduced by wearing heavy armor."
+      },
+      "skills": [
+        {
+          "name": "Darkvision",
+          "details": "<p>Accustomed to life underground, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray.</p>"
+        },
+        {
+          "name": "Dwarven Resilience",
+          "details": "<p>You have advantage on saving throws against poison, and you have resistance against poison damage (explained in the “Combat” section).</p>"
+        },
+        {
+          "name": "Dwarven Combat Training",
+          "details": "<p>You have proficiency with the battleaxe, handaxe, light hammer, and warhammer.</p>"
+        },
+        {
+          "name": "Tool Proficiency",
+          "details": "<p>You gain proficiency with the artisan’s tools of your choice: smith’s tools, brewer’s supplies, or mason’s tools.</p>"
+        },
+        {
+          "name": "Stonecunning",
+          "details": "<p>Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.</p>"
+        }
+      ],
+      "subrace": {
+        "name": "Dwarves Subraces",
+        "descriptions": [
           {
-            "title": "Principal",
-            "description": "<p>You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry. Your breath weapon and damage resistance are determined by the dragon type.</p>"
-          },
-          {
-            "title": "Breath Weapon",
-            "description": "<p>You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can’t use it again until you complete a short or long rest.</p>"
-          },
-          {
-            "title": "Resistance",
-            "description": "<p>You have resistance to the damage type associated with your draconic ancestry.</p>"
+            "title": "Dwarves Subraces",
+            "description": "<p>Your dwarf character has an assortment of inborn abilities, part and parcel of dwarven nature.</p>"
           }
         ],
-        "ancestry": [
+        "division": [
           {
             "id": 1,
-            "dragon": "Black",
-            "type": "Acid",
-            "breath_weapon": {
-              "min_range": 5,
-              "max_range": 30,
-              "path": "line",
-              "save": "DEX"
-            }
+            "name": "Hill Dwarf",
+            "details": "<p>As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience. The gold dwarves of Faerûn in their mighty southern kingdom are hill dwarves, as are the exiled Neidar and the debased Klar of Krynn in the Dragonlance setting.</p>",
+            "skills": [
+              {
+                "name": "Ability Score Increase",
+                "ability_score_increase": {
+                  "wisdom": 1
+                }
+              },
+              {
+                "name": "Dwarven Toughness",
+                "ability_score_increase_by_level": {
+                  "max_hp": 1
+                },
+                "details": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
+              }
+            ]
           },
           {
             "id": 2,
-            "dragon": "Blue",
-            "type": "Lightning",
-            "breath_weapon": {
-              "min_range": 5,
-              "max_range": 30,
-              "path": "line",
-              "save": "DEX"
-            }
-          },
-          {
-            "id": 3,
-            "dragon": "Brass",
-            "type": "Fire",
-            "breath_weapon": {
-              "min_range": 5,
-              "max_range": 30,
-              "path": "line",
-              "save": "DEX"
-            }
-          },
-          {
-            "id": 4,
-            "dragon": "Bronze",
-            "type": "Lightning",
-            "breath_weapon": {
-              "min_range": 5,
-              "max_range": 30,
-              "path": "line",
-              "save": "DEX"
-            }
-          },
-          {
-            "id": 5,
-            "dragon": "Copper",
-            "type": "Acid",
-            "breath_weapon": {
-              "min_range": 5,
-              "max_range": 30,
-              "path": "line",
-              "save": "DEX"
-            }
-          },
-          {
-            "id": 6,
-            "dragon": "Gold",
-            "type": "Fire",
-            "breath_weapon": {
-              "min_range": 0,
-              "max_range": 15,
-              "path": "cone",
-              "save": "DEX"
-            }
-          },
-          {
-            "id": 7,
-            "dragon": "Green",
-            "type": "Poison",
-            "breath_weapon": {
-              "min_range": 0,
-              "max_range": 15,
-              "path": "cone",
-              "save": "CON"
-            }
-          },
-          {
-            "id": 8,
-            "dragon": "Red",
-            "type": "Fire",
-            "breath_weapon": {
-              "min_range": 0,
-              "max_range": 15,
-              "path": "cone",
-              "save": "DEX"
-            }
-          },
-          {
-            "id": 9,
-            "dragon": "Silver",
-            "type": "Cold",
-            "breath_weapon": {
-              "min_range": 0,
-              "max_range": 15,
-              "path": "cone",
-              "save": "CON"
-            }
-          },
-          {
-            "id": 10,
-            "dragon": "White",
-            "type": "Cold",
-            "breath_weapon": {
-              "min_range": 0,
-              "max_range": 15,
-              "path": "cone",
-              "save": "CON"
-            }
+            "name": "Mountain Dwarf",
+            "details": "<p>As a mountain dwarf, you’re strong and hardy, accustomed to a difficult life in rugged terrain. You’re probably on the tall side (for a dwarf), and tend toward lighter coloration. The shield dwarves of northern Faerûn, as well as the ruling Hylar clan and the noble Daewar clan of Dragonlance, are mountain dwarves.</p>",
+            "skills": [
+              {
+                "name": "Ability Score Increase",
+                "value": {
+                  "strength": 2
+                }
+              },
+              {
+                "name": "Dwarven Armor Training",
+                "proficiency": [],
+                "details": "You have proficiency with light and medium armor."
+              }
+            ]
           }
         ]
       },
       "languages": {
-        "speak": ["Common", "Draconic"],
-        "read": ["Common", "Draconic"],
-        "write": ["Common", "Draconic"]
+        "speak": ["Common", "Dwarvish"],
+        "read": ["Common", "Dwarvish"],
+        "write": ["Common", "Dwarvish"]
       }
     }
   }
