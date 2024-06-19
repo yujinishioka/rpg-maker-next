@@ -16,8 +16,11 @@ export default function CardCharacter({ data }: any) {
         </p>)}
       </div>
     </div>
-    <nav className="flex justify-center bg-blue-400 rounded-b-lg p-1 text-white">
-      <Link href={`/characters/${data.id}`} className="border border-white px-4 py-1">Character</Link>
-    </nav>
+    <Link
+      href={`/characters/${data.id}`}
+      className="flex justify-center bg-blue-400 rounded-b-lg px-4 py-2 text-white"
+    >
+      Character
+    </Link>
   </div>
 }
