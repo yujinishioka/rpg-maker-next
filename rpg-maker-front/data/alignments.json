@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Lawful good",
+    "description": "Creatures can be counted on to do the right thing as expected by society. Gold dragons, paladins, and most dwarves are lawful good."
+  },
+  {
+    "id": 2,
+    "name": "Neutral good",
+    "description": "Folk do the best they can to help others according to their needs. Many celestiais, some cloud giants, and most gnomes are neutral good."
+  },
+  {
+    "id": 3,
+    "name": "Chaotic good",
+    "description": "Creatures act as their conscience directs, with little regard for what others expect. Copper dragons, many elves, and unicorns are chaotic good."
+  },
+  {
+    "id": 4,
+    "name": "Lawful neutral",
+    "description": "Individuals act in accordance with law, tradition, or personal codes. Many monks and some wizards are lawful neutral."
+  },
+  {
+    "id": 5,
+    "name": "Neutral",
+    "description": "Is the alignment of those who prefer to steer c1ear of moral questions and don't take sides, doing what seems best at the time. Lizardfolk, most druids, and many humans are neutral."
+  },
+  {
+    "id": 6,
+    "name": "Chaotic neutral",
+    "description": "Creatures follow their whims, holding their personal freedom above all else. Many barbarians and rogues, and some bards, are chaotic neutral."
+  },
+  {
+    "id": 7,
+    "name": "Lawful evil",
+    "description": "Creatures methodically take what they want, within the limits of acode of tradition, loyalty, or order. Devils, blue dragons, and hobgoblins are Lawful evil."
+  },
+  {
+    "id": 8,
+    "name": "Neutral evil",
+    "description": "Is the alignment of those who do whatever they can get away with, without compassion or qualms. Many drow, some cloud giants, and yugoloths are neutral evil."
+  },
+  {
+    "id": 9,
+    "name": "Chaotic evil",
+    "description": "Creatures act with arbitrary violence, spurred by their greed, hatred, or bloodlust. Demons, red dragons, and orcs are chaotic evil."
+  }
+]
