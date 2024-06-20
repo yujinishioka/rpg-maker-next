@@ -40,110 +40,110 @@
       "speed": {
         "value": 30
       },
-      "subrace": {
-        "name": "Draconic Ancestry",
-        "descriptions": [
-          {
-            "title": "Draconic Ancestry",
-            "text": "<p>You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry. Your breath weapon and damage resistance are determined by the dragon type.</p>"
-          },
-          {
-            "title": "Breath Weapon",
-            "text": "<p>You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can’t use it again until you complete a short or long rest.</p>"
-          },
-          {
-            "title": "Resistance",
-            "text": "<p>You have resistance to the damage type associated with your draconic ancestry.</p>"
-          }
-        ],
-        "division": [
-          {
-            "id": 1,
-            "name": "Black",
-            "skills": {
-              "resistance": ["Acid"],
-              "attacks": [41]
-            }
-          },
-          {
-            "id": 2,
-            "name": "Blue",
-            "skills": {
-              "resistance": ["Lightning"],
-              "attacks": [44]
-            }
-          },
-          {
-            "id": 3,
-            "name": "Brass",
-            "skills": {
-              "resistance": ["Fire"],
-              "attacks": [43]
-            }
-          },
-          {
-            "id": 4,
-            "name": "Bronze",
-            "skills": {
-              "resistance": ["Lightning"],
-              "attacks": [44]
-            }
-          },
-          {
-            "id": 5,
-            "name": "Copper",
-            "skills": {
-              "resistance": ["Acid"],
-              "attacks": [41]
-            }
-          },
-          {
-            "id": 6,
-            "name": "Gold",
-            "skills": {
-              "resistance": ["Fire"],
-              "attacks": [43]
-            }
-          },
-          {
-            "id": 7,
-            "name": "Green",
-            "skills": {
-              "resistance": ["Poison"],
-              "attacks": [45]
-            }
-          },
-          {
-            "id": 8,
-            "name": "Red",
-            "skills": {
-              "resistance": ["Fire"],
-              "attacks": [43]
-            }
-          },
-          {
-            "id": 9,
-            "name": "Silver",
-            "skills": {
-              "resistance": ["Cold"],
-              "attacks": [42]
-            }
-          },
-          {
-            "id": 10,
-            "name": "White",
-            "skills": {
-              "resistance": ["Cold"],
-              "attacks": [42]
-            }
-          }
-        ]
-      },
       "languages": {
         "speak": ["Common", "Draconic"],
         "read": ["Common", "Draconic"],
         "write": ["Common", "Draconic"]
       }
+    },
+    "subrace": {
+      "name": "Draconic Ancestry",
+      "descriptions": [
+        {
+          "title": "Draconic Ancestry",
+          "text": "<p>You have draconic ancestry. Choose one type of dragon from the Draconic Ancestry. Your breath weapon and damage resistance are determined by the dragon type.</p>"
+        },
+        {
+          "title": "Breath Weapon",
+          "text": "<p>You can use your action to exhale destructive energy. Your draconic ancestry determines the size, shape, and damage type of the exhalation. When you use your breath weapon, each creature in the area of the exhalation must make a saving throw, the type of which is determined by your draconic ancestry. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 2d6 damage on a failed save, and half as much damage on a successful one. The damage increases to 3d6 at 6th level, 4d6 at 11th level, and 5d6 at 16th level. After you use your breath weapon, you can’t use it again until you complete a short or long rest.</p>"
+        },
+        {
+          "title": "Resistance",
+          "text": "<p>You have resistance to the damage type associated with your draconic ancestry.</p>"
+        }
+      ],
+      "division": [
+        {
+          "id": 1,
+          "name": "Black",
+          "skills": {
+            "resistance": ["Acid"],
+            "attacks": [41]
+          }
+        },
+        {
+          "id": 2,
+          "name": "Blue",
+          "skills": {
+            "resistance": ["Lightning"],
+            "attacks": [44]
+          }
+        },
+        {
+          "id": 3,
+          "name": "Brass",
+          "skills": {
+            "resistance": ["Fire"],
+            "attacks": [43]
+          }
+        },
+        {
+          "id": 4,
+          "name": "Bronze",
+          "skills": {
+            "resistance": ["Lightning"],
+            "attacks": [44]
+          }
+        },
+        {
+          "id": 5,
+          "name": "Copper",
+          "skills": {
+            "resistance": ["Acid"],
+            "attacks": [41]
+          }
+        },
+        {
+          "id": 6,
+          "name": "Gold",
+          "skills": {
+            "resistance": ["Fire"],
+            "attacks": [43]
+          }
+        },
+        {
+          "id": 7,
+          "name": "Green",
+          "skills": {
+            "resistance": ["Poison"],
+            "attacks": [45]
+          }
+        },
+        {
+          "id": 8,
+          "name": "Red",
+          "skills": {
+            "resistance": ["Fire"],
+            "attacks": [43]
+          }
+        },
+        {
+          "id": 9,
+          "name": "Silver",
+          "skills": {
+            "resistance": ["Cold"],
+            "attacks": [42]
+          }
+        },
+        {
+          "id": 10,
+          "name": "White",
+          "skills": {
+            "resistance": ["Cold"],
+            "attacks": [42]
+          }
+        }
+      ]
     }
   },
   {
@@ -216,60 +216,60 @@
           "details": "<p>Whenever you make an Intelligence (History) check related to the origin of stonework, you are considered proficient in the History skill and add double your proficiency bonus to the check, instead of your normal proficiency bonus.</p>"
         }
       ],
-      "subrace": {
-        "name": "Dwarves Subraces",
-        "descriptions": [
-          {
-            "title": "Dwarves Subraces",
-            "description": "<p>Your dwarf character has an assortment of inborn abilities, part and parcel of dwarven nature.</p>"
-          }
-        ],
-        "division": [
-          {
-            "id": 1,
-            "name": "Hill Dwarf",
-            "details": "<p>As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience. The gold dwarves of Faerûn in their mighty southern kingdom are hill dwarves, as are the exiled Neidar and the debased Klar of Krynn in the Dragonlance setting.</p>",
-            "skills": [
-              {
-                "name": "Ability Score Increase",
-                "ability_score_increase": {
-                  "wisdom": 1
-                }
-              },
-              {
-                "name": "Dwarven Toughness",
-                "ability_score_increase_by_level": {
-                  "max_hp": 1
-                },
-                "details": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
-              }
-            ]
-          },
-          {
-            "id": 2,
-            "name": "Mountain Dwarf",
-            "details": "<p>As a mountain dwarf, you’re strong and hardy, accustomed to a difficult life in rugged terrain. You’re probably on the tall side (for a dwarf), and tend toward lighter coloration. The shield dwarves of northern Faerûn, as well as the ruling Hylar clan and the noble Daewar clan of Dragonlance, are mountain dwarves.</p>",
-            "skills": [
-              {
-                "name": "Ability Score Increase",
-                "value": {
-                  "strength": 2
-                }
-              },
-              {
-                "name": "Dwarven Armor Training",
-                "proficiency": [],
-                "details": "You have proficiency with light and medium armor."
-              }
-            ]
-          }
-        ]
-      },
       "languages": {
         "speak": ["Common", "Dwarvish"],
         "read": ["Common", "Dwarvish"],
         "write": ["Common", "Dwarvish"]
       }
+    },
+    "subrace": {
+      "name": "Dwarves Subraces",
+      "descriptions": [
+        {
+          "title": "Dwarves Subraces",
+          "description": "<p>Your dwarf character has an assortment of inborn abilities, part and parcel of dwarven nature.</p>"
+        }
+      ],
+      "division": [
+        {
+          "id": 1,
+          "name": "Hill Dwarf",
+          "details": "<p>As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience. The gold dwarves of Faerûn in their mighty southern kingdom are hill dwarves, as are the exiled Neidar and the debased Klar of Krynn in the Dragonlance setting.</p>",
+          "skills": [
+            {
+              "name": "Ability Score Increase",
+              "ability_score_increase": {
+                "wisdom": 1
+              }
+            },
+            {
+              "name": "Dwarven Toughness",
+              "ability_score_increase_by_level": {
+                "max_hp": 1
+              },
+              "details": "Your hit point maximum increases by 1, and it increases by 1 every time you gain a level."
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Mountain Dwarf",
+          "details": "<p>As a mountain dwarf, you’re strong and hardy, accustomed to a difficult life in rugged terrain. You’re probably on the tall side (for a dwarf), and tend toward lighter coloration. The shield dwarves of northern Faerûn, as well as the ruling Hylar clan and the noble Daewar clan of Dragonlance, are mountain dwarves.</p>",
+          "skills": [
+            {
+              "name": "Ability Score Increase",
+              "value": {
+                "strength": 2
+              }
+            },
+            {
+              "name": "Dwarven Armor Training",
+              "proficiency": [],
+              "details": "You have proficiency with light and medium armor."
+            }
+          ]
+        }
+      ]
     }
   }
 ]

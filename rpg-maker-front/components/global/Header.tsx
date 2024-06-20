@@ -11,7 +11,7 @@ export default function Header() {
     { name: "Account", href: "account" },
   ]
 
-  return <div className="py-4 bg-black/70">
+  return <div className="py-4 bg-secondary">
     <div className="container flex items-center justify-between text-white">
       <Link href="/">RPG maker</Link>
       <p>logo</p>

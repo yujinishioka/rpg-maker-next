@@ -4,14 +4,14 @@ import classes from '@/data/classes.json';
 import races from '@/data/races.json';
 
 export default function CharacterCreate(): any {
+  const ability_score = ['Str', 'Dex', 'Con', 'Int', 'Wis', 'Cha'];
   const attitude = ['Good', 'Neutral', 'Evil'];
   const morality = ['Lawful', 'Neutral', 'Chaotic'];
-  const attributes = ['Str', 'Dex', 'Con', 'Int', 'Wis', 'Cha'];
 
   const data = {
+    ability_score,
     alignments,
     attitude,
-    attributes,
     classes,
     morality,
     races
