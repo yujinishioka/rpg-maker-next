@@ -10,6 +10,7 @@ import { AbilityScores, SkillsProficiency } from '@/types/index';
 
 export default function BlockCharacterCreate({ data }: any) {
   const [selectedRace, setSelectedRace] = useState<any>(null);
+  const [selectedSubRace, setSelectedSubRace] = useState<any>(null);
   const [selectedClass, setSelectedClass] = useState<any>(null);
   const [selectedMorality, setSelectedMorality] = useState<string | null>(null);
   const [selectedAttitude, setSelectedAttitude] = useState<string | null>(null);
@@ -50,6 +51,7 @@ export default function BlockCharacterCreate({ data }: any) {
   const classes = data.classes;
   const morality = data.morality;
   const races = data.races;
+  const namesExamplesByRace = ['male', 'female', 'childhood', 'clan'];
   const ability_score = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
   const skills_proficiency = [
     { name: 'Acrobatics', value: 'acrobatics', ability: 'dex' },
@@ -83,6 +85,12 @@ export default function BlockCharacterCreate({ data }: any) {
   const handleRaceChange = (value: string) => {
     const race = races.find((race: any) => race.name === value);
     setSelectedRace(race);
+    setSelectedSubRace(null);
+  };
+
+  const handleSubRaceChange = (value: string) => {
+    const subrace = selectedRace.subrace.division.find((subrace: any) => subrace.name === value);
+    setSelectedSubRace(subrace);
   };
 
   const handleClassChange = (value: string) => {
@@ -177,9 +185,10 @@ export default function BlockCharacterCreate({ data }: any) {
 
   const nameEmpty = () => name === "";
   const raceEmpty = () => selectedRace === null;
+  const subraceEmpty = () => (selectedRace !== null && selectedRace.subrace !== null && selectedSubRace === null);
   const classEmpty = () => selectedClass === null;
   const alignmentEmpty = () => (selectedMorality === null || selectedAttitude === null);
-  const fieldsEmpty = () => (nameEmpty() || raceEmpty() || classEmpty() || alignmentEmpty());
+  const fieldsEmpty = () => (nameEmpty() || raceEmpty() || subraceEmpty() || classEmpty() || alignmentEmpty());
 
   return (
     <div className="container lg:flex lg:gap-12">
@@ -225,6 +234,23 @@ export default function BlockCharacterCreate({ data }: any) {
               </SelectContent>
             </Select>
           </label>
+          {selectedRace && selectedRace.subrace !== null && (
+            <label className='flex gap-2 items-center justify-between'>
+              <h2>Sub Race</h2>
+              <Select value={selectedSubRace?.name || ''} onValueChange={handleSubRaceChange}>
+                <SelectTrigger className="w-[240px]">
+                  <SelectValue placeholder="Select a subrace" />
+                </SelectTrigger>
+                <SelectContent>
+                  {selectedRace.subrace.division?.length > 0 && selectedRace.subrace.division.map((subrace: any) => (
+                    <SelectItem key={`race-${subrace.id}`} value={subrace.name}>
+                      {subrace.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </label>
+          )}
           <label className='flex gap-2 items-center justify-between'>
             <h2>Class</h2>
             <Select value={selectedClass?.name || ''} onValueChange={handleClassChange}>
@@ -447,6 +473,7 @@ export default function BlockCharacterCreate({ data }: any) {
                   <div className='max-w-[180px] text-center'>
                     <p>{ nameEmpty() ? 'empty NAME field' : '' }</p>
                     <p>{ raceEmpty() ? 'empty RACE field' : '' }</p>
+                    <p>{ subraceEmpty() ? 'empty SUBRACE field' : '' }</p>
                     <p>{ classEmpty() ? 'empty CLASS field' : '' }</p>
                     <p>{ alignmentEmpty() ? 'empty ALIGNMENT field' : '' }</p>
                   </div>
@@ -479,38 +506,18 @@ export default function BlockCharacterCreate({ data }: any) {
                 <h3 className='font-semibold'>Names</h3>
                 <Html text={selectedRace.names.description} />
                 <div className="flex flex-col gap-1 text-sm">
-                  {selectedRace.names?.types?.male && selectedRace.names.types.male.length > 0 &&(
-                    <div className="flex flex-wrap gap-1">
-                      <h4 className='font-semibold'>Male:</h4>
-                      {selectedRace.names.types.male.map((maleName: any, index: number) => (
-                        <p key={`names-male-${index}`}>{maleName}</p>
-                      ))}
+                  {selectedRace.names?.types && namesExamplesByRace.map((type: any) => (
+                    <div key={`names-${selectedRace}-${type}`} className="flex flex-wrap gap-1">
+                      {selectedRace.names?.types[type] && (
+                        <>
+                          <h4 className='font-semibold'>{type}:</h4>
+                          {selectedRace.names.types[type].map((name: string) => (
+                            <p key={`${selectedRace}-${name}`}>{name}</p>
+                          ))}
+                        </>
+                      )}
                     </div>
-                  )}
-                  {selectedRace.names?.types?.female && selectedRace.names.types.female.length > 0 && (
-                    <div className="flex flex-wrap gap-1">
-                      <h4 className='font-semibold'>Female:</h4>
-                      {selectedRace.names.types.female.map((femaleName: any, index: number) => (
-                        <p key={`names-female-${index}`}>{femaleName}</p>
-                      ))}
-                    </div>
-                  )}
-                  {selectedRace.names?.types?.childhood && selectedRace.names.types.childhood.length > 0 && (
-                    <div className="flex flex-wrap gap-1">
-                      <h4 className='font-semibold'>Childhood:</h4>
-                      {selectedRace.names.types.childhood.map((childhoodName: any, index: number) => (
-                        <p key={`names-childhood-${index}`}>{childhoodName}</p>
-                      ))}
-                    </div>
-                  )}
-                  {selectedRace.names?.types?.clan && selectedRace.names.types.clan.length > 0 &&(
-                    <div className="flex flex-wrap gap-1">
-                      <h4 className='font-semibold'>Clan:</h4>
-                      {selectedRace.names.types.clan.map((clanName: any, index: number) => (
-                        <p key={`names-clan-${index}`}>{clanName}</p>
-                      ))}
-                    </div>
-                  )}
+                  ))}
                 </div>
               </div>
             )}
