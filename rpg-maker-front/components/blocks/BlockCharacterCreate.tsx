@@ -52,24 +52,24 @@ export default function BlockCharacterCreate({ data }: any) {
   const races = data.races;
   const ability_score = ['str', 'dex', 'con', 'int', 'wis', 'cha'];
   const skills_proficiency = [
-    { name: 'Acrobatics', ability: 'dex' },
-    { name: 'Animal Handling', ability: 'wis' },
-    { name: 'Arcana', ability: 'int' },
-    { name: 'Athletics', ability: 'str' },
-    { name: 'Deception', ability: 'cha' },
-    { name: 'History', ability: 'int' },
-    { name: 'Insight', ability: 'wis' },
-    { name: 'Intimidation', ability: 'cha' },
-    { name: 'Investigation', ability: 'int' },
-    { name: 'Medicine', ability: 'wis' },
-    { name: 'Nature', ability: 'int' },
-    { name: 'Perception', ability: 'wis' },
-    { name: 'Performance', ability: 'cha' },
-    { name: 'Persuasion', ability: 'cha' },
-    { name: 'Religion', ability: 'int' },
-    { name: 'Sleight of Hand', ability: 'dex' },
-    { name: 'Stealth', ability: 'dex' },
-    { name: 'Survival', ability: 'wis' }
+    { name: 'Acrobatics', value: 'acrobatics', ability: 'dex' },
+    { name: 'Animal Handling', value: 'animalHandling', ability: 'wis' },
+    { name: 'Arcana', value: 'arcana', ability: 'int' },
+    { name: 'Athletics', value: 'athletics', ability: 'str' },
+    { name: 'Deception', value: 'deception', ability: 'cha' },
+    { name: 'History', value: 'history', ability: 'int' },
+    { name: 'Insight', value: 'insight', ability: 'wis' },
+    { name: 'Intimidation', value: 'intimidation', ability: 'cha' },
+    { name: 'Investigation', value: 'investigation', ability: 'int' },
+    { name: 'Medicine', value: 'medicine', ability: 'wis' },
+    { name: 'Nature', value: 'nature', ability: 'int' },
+    { name: 'Perception', value: 'perception', ability: 'wis' },
+    { name: 'Performance', value: 'performance', ability: 'cha' },
+    { name: 'Persuasion', value: 'persuasion', ability: 'cha' },
+    { name: 'Religion', value: 'religion', ability: 'int' },
+    { name: 'Sleight of Hand', value: 'sleightOfHand', ability: 'dex' },
+    { name: 'Stealth', value: 'stealth', ability: 'dex' },
+    { name: 'Survival', value: 'survival', ability: 'wis' }
   ]
 
   const handleGenderChange = (value: string) => {
@@ -101,15 +101,13 @@ export default function BlockCharacterCreate({ data }: any) {
   };
 
   const handleSkillsProficiencyChange = (
-    event: React.ChangeEvent<HTMLInputElement>,
-    skill: string
+    event: any,
+    skill: keyof SkillsProficiency
   ) => {
-    const { checked } = event.target;
-    console.log('handleSkillsProficiencyChange');
-    setSkillsProficiency(prevState => ({
-      ...prevState,
-      [skill]: checked,
-    }));
+    setSkillsProficiency({
+      ...skillsProficiency,
+      [skill]: event,
+    });
   }
 
   const handleAgeChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -176,6 +174,12 @@ export default function BlockCharacterCreate({ data }: any) {
     setIdeals('');
     console.log('Limpar campos.');
   }
+
+  const nameEmpty = () => name === "";
+  const raceEmpty = () => selectedRace === null;
+  const classEmpty = () => selectedClass === null;
+  const alignmentEmpty = () => (selectedMorality === null || selectedAttitude === null);
+  const fieldsEmpty = () => (nameEmpty() || raceEmpty() || classEmpty() || alignmentEmpty());
 
   return (
     <div className="container lg:flex lg:gap-12">
@@ -311,7 +315,7 @@ export default function BlockCharacterCreate({ data }: any) {
                       <Checkbox
                         name={skill.name}
                         checked={skillsProficiency[skill.name as keyof SkillsProficiency]}
-                        onChange={(e) => handleSkillsProficiencyChange(e, skill.name)}
+                        onCheckedChange={(e) => handleSkillsProficiencyChange(e, skill.value)}
                       />
                       <label
                         htmlFor={skill.name}
@@ -323,7 +327,7 @@ export default function BlockCharacterCreate({ data }: any) {
                     <p>
                       {
                         abilityScores[skill.ability as keyof AbilityScores] +
-                        (skillsProficiency[skill.name.toLowerCase() as keyof SkillsProficiency] ? 2 : 0)
+                        (skillsProficiency[skill.value as keyof SkillsProficiency] ? 2 : 0)
                       }
                     </p>
                   </div>
@@ -398,43 +402,61 @@ export default function BlockCharacterCreate({ data }: any) {
             </label>
             <label className='flex flex-col gap-2 items-center justify-between lg:flex-row'>
               <p>Personality:</p>
-              <textarea 
-                name="personality" 
-                rows={8} 
-                value={personality} 
-                onChange={handlePersonalityChange} 
-                className='w-full p-1 content-center text-center text-sm border rounded lg:w-[180px]' 
+              <textarea
+                name="personality"
+                rows={8}
+                value={personality}
+                onChange={handlePersonalityChange}
+                className='w-full p-1 content-center text-center text-sm border rounded lg:w-[180px]'
               />
             </label>
             <label className='flex flex-col gap-2 items-center justify-between lg:flex-row'>
               <p>Ideals:</p>
-              <textarea 
-                name="ideals" 
-                rows={8} 
-                value={ideals} 
-                onChange={handleIdealsChange} 
-                className='w-full p-1 content-center text-center text-sm border rounded lg:w-[180px]' 
+              <textarea
+                name="ideals"
+                rows={8}
+                value={ideals}
+                onChange={handleIdealsChange}
+                className='w-full p-1 content-center text-center text-sm border rounded lg:w-[180px]'
               />
             </label>
           </div>
           <p className='my-3 underline text-sm'>Other infos:</p>
           <div className='flex flex-col gap-2'>
-            <h2>TODO</h2>
+            <h2>Hit Points:</h2>
             <div>
               <p>texto</p>
             </div>
           </div>
         </div>
         <div className='flex justify-center pt-8 pb-6 gap-6 lg:pb-2'>
+          <div className='relative'>
+            <Button
+              onClick={handleCharacter}
+              className='px-10'
+              disabled={fieldsEmpty()}
+            >
+              Create
+            </Button>
+            <TooltipProvider>
+              <Tooltip>
+                <TooltipTrigger className={`absolute top-2 right-2 px-2 bg-primary text-white z-50 rounded-lg`}>
+                  { fieldsEmpty() ? '?' : '' }
+                </TooltipTrigger>
+                <TooltipContent className='mb-2 bg-black/80 text-white text-sm'>
+                  <div className='max-w-[180px] text-center'>
+                    <p>{ nameEmpty() ? 'empty NAME field' : '' }</p>
+                    <p>{ raceEmpty() ? 'empty RACE field' : '' }</p>
+                    <p>{ classEmpty() ? 'empty CLASS field' : '' }</p>
+                    <p>{ alignmentEmpty() ? 'empty ALIGNMENT field' : '' }</p>
+                  </div>
+                </TooltipContent>
+              </Tooltip>
+            </TooltipProvider>
+          </div>
           <Button
-            className='px-10'
-            onClick={handleCharacter}
-          >
-            Create
-          </Button>
-          <Button
-            className='px-10'
             onClick={handleClear}
+            className='px-10'
           >
             Reset
           </Button>
