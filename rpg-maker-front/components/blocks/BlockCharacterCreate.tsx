@@ -489,13 +489,13 @@ export default function BlockCharacterCreate({ data }: any) {
           </Button>
         </div>
       </div>
-      <div className='lg:w-[calc(100%-688px)] text-sm text-justify'>
-        <h2 className='uppercase mb-6'>Race & Class</h2>
+      <div className='flex flex-col gap-4 text-sm text-justify lg:w-[calc(100%-688px)]'>
+        <h2 className='uppercase mb-4'>Race & Class</h2>
         {selectedRace && (
           <>
             {selectedRace.details?.length > 0 && (
               selectedRace.details.map((detail: any, index: number) => (
-                <div key={`race-details-${index}`} className="flex flex-col gap-2 mb-6 last:mb-0">
+                <div key={`race-details-${index}`} className="flex flex-col gap-2 last:mb-0">
                   <h3 className="font-semibold">{detail.title}</h3>
                   <Html text={detail.description} className="flex flex-col gap-2" />
                 </div>
@@ -521,6 +521,16 @@ export default function BlockCharacterCreate({ data }: any) {
                 </div>
               </div>
             )}
+          </>
+        )}
+        {selectedSubRace && (
+          <>
+            <p className='font-semibold'>{selectedSubRace.name}</p>
+          </>
+        )}
+        {selectedClass && (
+          <>
+            <p className='font-semibold'>{selectedClass.name}</p>
           </>
         )}
       </div>
